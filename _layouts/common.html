@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- Heya. I see you there. Looking for something? -->
+<html lang="en">
+
+<head>
+    {% if page.title %}
+        {% assign title = "LeadRDRK // " | append: page.title %}
+    {% else %}
+        {% assign title = "LeadRDRK" %}
+    {% endif %}
+    <title>{{title}}</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Programmer // UI Designer // Artist">
+    <meta name="keywords" content="lead, lead6dead2">
+    <meta name="author" content="LeadRDRK">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph -->
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:description" content="Programmer // UI Designer // Artist">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://leadrdrk.eu.org">
+    <meta property="og:image" content="https://leadrdrk.eu.org/assets/img/leadrdrk_icon.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://leadrdrk.eu.org">
+    <meta property="twitter:title" content="{{title}}">
+    <meta property="twitter:description" content="Programmer // UI Designer // Artist">
+    <meta property="twitter:image" content="https://leadrdrk.eu.org/assets/img/leadrdrk_twt.png">
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="https://leadrdrk.eu.org/assets/img/leadrdrk_icon.png">
+    <link rel="shortcut icon" href="https://leadrdrk.eu.org/favicon.ico">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/nougat.css"/>
+    <link rel="stylesheet" href="/assets/css/common.css"/>
+</head>
+
+<body>
+    <!-- Background -->
+    <div id="background" class="background home"></div>
+    <div class="container mouse-move">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a href="/" class="navbar-brand">
+                <img src="/assets/img/leadrdrk.svg">
+                <div class="underline"></div>
+            </a>
+            <div id="navbarBurger" class="navbar-burger light mobile">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="navbarContent" class="navbar-content not-mobile">
+                <a href="/" class="navbar-item effect-hover">HOME</a>
+                <a href="/projects" class="navbar-item effect-hover">PROJECTS</a>
+                <a href="/about" class="navbar-item effect-hover">ABOUT</a>
+            </div>
+        </nav>
+        <!-- Main -->
+        <div id="main" class="container margin-t3" style="width: 100%">
+            <h1 class="title">{{ page.content_title }}</h1>
+            <div class="body">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="/assets/js/common.js"></script>
+    {% if page.script %}
+        <script src="{{ page.script }}"></script>
+    {% endif %}
+</body>
+
+</html>

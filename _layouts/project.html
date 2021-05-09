@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- Heya. I see you there. Looking for something? -->
+<html lang="en">
+
+<head>
+    <title>Project Info</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="https://leadrdrk.eu.org/assets/img/leadrdrk_icon.png">
+    <link rel="shortcut icon" href="https://leadrdrk.eu.org/favicon.ico">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/nougat.css"/>
+    <link rel="stylesheet" href="/assets/css/common.css"/>
+</head>
+
+<body style="background: none">
+    <div class="project-container mouse-move">
+        {% if page.icon %}
+            <img class="project-icon" src="{{ page.icon }}"></img>
+        {% endif %}
+        <h1>{{ page.title }}</h1>
+        <div class="project-links">
+            {% if page.website %}
+                <a class="button light" href="{{ page.website }}" target="_blank">
+                    <i class="icon globe"></i>Website
+                </a>
+            {% endif %}
+            {% if page.github %}
+                <a class="button light" href="{{ page.github }}" target="_blank">
+                    <i class="icon github"></i>GitHub
+                </a>
+            {% endif %}
+        </div>
+        <div class="project-date">Release date: {{ page.date }}</div>
+        <hr>
+        <div>
+            {{ content }}
+        </div>
+    </div>
+    <script src="/assets/js/common.js"></script>
+</body>
+
+</html>
