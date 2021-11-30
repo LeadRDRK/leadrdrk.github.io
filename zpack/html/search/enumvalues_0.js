@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['zpack_5ferror_5farchive_5fnot_5floaded_0',['ZPACK_ERROR_ARCHIVE_NOT_LOADED',['../group__common.html#gga129a232956d239f88517deba48531e45a5c29d70c298e0e86762d8015b550abad',1,'zpack.h']]],
+  ['zpack_5ferror_5fblock_5fsize_5finvalid_1',['ZPACK_ERROR_BLOCK_SIZE_INVALID',['../group__common.html#gga129a232956d239f88517deba48531e45af310f17a40edaea152b59ad03f603ae2',1,'zpack.h']]],
+  ['zpack_5ferror_5fbuffer_5ftoo_5fsmall_2',['ZPACK_ERROR_BUFFER_TOO_SMALL',['../group__common.html#gga129a232956d239f88517deba48531e45ad56706b63f1c791b6d2167f9328131be',1,'zpack.h']]],
+  ['zpack_5ferror_5fcomp_5fmethod_5finvalid_3',['ZPACK_ERROR_COMP_METHOD_INVALID',['../group__common.html#gga129a232956d239f88517deba48531e45a4fcb56197fb7b14ac2211afb4700087b',1,'zpack.h']]],
+  ['zpack_5ferror_5fcompress_5ffailed_4',['ZPACK_ERROR_COMPRESS_FAILED',['../group__common.html#gga129a232956d239f88517deba48531e45a46bc23ec3d792c3b46cdc02e37c6db4a',1,'zpack.h']]],
+  ['zpack_5ferror_5fdecompress_5ffailed_5',['ZPACK_ERROR_DECOMPRESS_FAILED',['../group__common.html#gga129a232956d239f88517deba48531e45aed85bb6c03fa59150044fc99e571ada0',1,'zpack.h']]],
+  ['zpack_5ferror_5ffile_5fhash_5fmismatch_6',['ZPACK_ERROR_FILE_HASH_MISMATCH',['../group__common.html#gga129a232956d239f88517deba48531e45a8360a9afd375f697ddb2445ac8334194',1,'zpack.h']]],
+  ['zpack_5ferror_5ffile_5fincomplete_7',['ZPACK_ERROR_FILE_INCOMPLETE',['../group__common.html#gga129a232956d239f88517deba48531e45a19d4027dc5ec39072ab06ec9d79d2c2e',1,'zpack.h']]],
+  ['zpack_5ferror_5ffile_5fnot_5ffound_8',['ZPACK_ERROR_FILE_NOT_FOUND',['../group__common.html#gga129a232956d239f88517deba48531e45a1faf73bbd5ea3833c9d86a9f0019df63',1,'zpack.h']]],
+  ['zpack_5ferror_5ffile_5foffset_5finvalid_9',['ZPACK_ERROR_FILE_OFFSET_INVALID',['../group__common.html#gga129a232956d239f88517deba48531e45a548d1952255f6b150414cb3ae07ad305',1,'zpack.h']]],
+  ['zpack_5ferror_5ffile_5fsize_5finvalid_10',['ZPACK_ERROR_FILE_SIZE_INVALID',['../group__common.html#gga129a232956d239f88517deba48531e45a1fcc532ad9c8d25d1d6459a2794f1fc7',1,'zpack.h']]],
+  ['zpack_5ferror_5ffile_5ftoo_5fsmall_11',['ZPACK_ERROR_FILE_TOO_SMALL',['../group__common.html#gga129a232956d239f88517deba48531e45ad799bf42662254f60be5ea701b9e6024',1,'zpack.h']]],
+  ['zpack_5ferror_5ffilename_5ftoo_5flong_12',['ZPACK_ERROR_FILENAME_TOO_LONG',['../group__common.html#gga129a232956d239f88517deba48531e45ab4fc77ccd942a8502970a090d120c969',1,'zpack.h']]],
+  ['zpack_5ferror_5fhash_5ffailed_13',['ZPACK_ERROR_HASH_FAILED',['../group__common.html#gga129a232956d239f88517deba48531e45af5a20dee188f1c6b1cbe3b7ffd173c89',1,'zpack.h']]],
+  ['zpack_5ferror_5fmalloc_5ffailed_14',['ZPACK_ERROR_MALLOC_FAILED',['../group__common.html#gga129a232956d239f88517deba48531e45aacc4cef4b73da5ba3cd7e5b59fc0b73e',1,'zpack.h']]],
+  ['zpack_5ferror_5fnot_5favailable_15',['ZPACK_ERROR_NOT_AVAILABLE',['../group__common.html#gga129a232956d239f88517deba48531e45a570645ac1307a6f0d2189413597ab539',1,'zpack.h']]],
+  ['zpack_5ferror_5fopen_5ffailed_16',['ZPACK_ERROR_OPEN_FAILED',['../group__common.html#gga129a232956d239f88517deba48531e45a39577381d4e00ca967b6e02331d016a8',1,'zpack.h']]],
+  ['zpack_5ferror_5fread_5ffailed_17',['ZPACK_ERROR_READ_FAILED',['../group__common.html#gga129a232956d239f88517deba48531e45aea769e38345d3814c60a70fa7fa59674',1,'zpack.h']]],
+  ['zpack_5ferror_5fseek_5ffailed_18',['ZPACK_ERROR_SEEK_FAILED',['../group__common.html#gga129a232956d239f88517deba48531e45a39f4dfd8a104b05e250e53efc06bdc13',1,'zpack.h']]],
+  ['zpack_5ferror_5fsignature_5finvalid_19',['ZPACK_ERROR_SIGNATURE_INVALID',['../group__common.html#gga129a232956d239f88517deba48531e45a6e56ce4e6047d73ab184940528aed390',1,'zpack.h']]],
+  ['zpack_5ferror_5fstream_5finvalid_20',['ZPACK_ERROR_STREAM_INVALID',['../group__common.html#gga129a232956d239f88517deba48531e45ad1b4e9d36b4016da8975c0b4ffd058ab',1,'zpack.h']]],
+  ['zpack_5ferror_5fversion_5fincompatible_21',['ZPACK_ERROR_VERSION_INCOMPATIBLE',['../group__common.html#gga129a232956d239f88517deba48531e45a8b1300e62ec1d02f24e048083c45b5ec',1,'zpack.h']]],
+  ['zpack_5ferror_5fwrite_5ffailed_22',['ZPACK_ERROR_WRITE_FAILED',['../group__common.html#gga129a232956d239f88517deba48531e45aa215555999739ecef74deec48e794d19',1,'zpack.h']]],
+  ['zpack_5ferror_5fwriter_5fnot_5fopened_23',['ZPACK_ERROR_WRITER_NOT_OPENED',['../group__common.html#gga129a232956d239f88517deba48531e45aa03e60233cee59838dc7687557460120',1,'zpack.h']]],
+  ['zpack_5fok_24',['ZPACK_OK',['../group__common.html#gga129a232956d239f88517deba48531e45a7843d141bd95b643d82ab3a4da8a0032',1,'zpack.h']]]
+];

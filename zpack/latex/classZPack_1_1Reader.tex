@@ -1,0 +1,327 @@
+\hypertarget{classZPack_1_1Reader}{}\doxysection{ZPack\+::Reader Class Reference}
+\label{classZPack_1_1Reader}\index{ZPack::Reader@{ZPack::Reader}}
+
+
+Archive reader.  
+
+
+
+
+{\ttfamily \#include $<$zpack.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classZPack_1_1Reader_a1f8d74d303afaaf96ec69bb92e18bdb7}\label{classZPack_1_1Reader_a1f8d74d303afaaf96ec69bb92e18bdb7}} 
+{\bfseries Reader} (const std\+::string \&filename)
+\item 
+int \mbox{\hyperlink{classZPack_1_1Reader_a7a90682fa308d0b89f310c155ba4b0f1}{open\+File}} (const std\+::string \&filename)
+\item 
+void \mbox{\hyperlink{classZPack_1_1Reader_ac965678f0f3d397c2b39527d325db23e}{close\+File}} ()
+\item 
+int \mbox{\hyperlink{classZPack_1_1Reader_ae72b0bff505d8cc4bb70f12568dc8ea8}{read\+Header}} (uint16\+\_\+t \&req\+Version)
+\item 
+int \mbox{\hyperlink{classZPack_1_1Reader_a1c62dc9831d48068bd332b3672d9d4b4}{read\+EOCDR}} (uint64\+\_\+t \&cdr\+Offset)
+\item 
+int \mbox{\hyperlink{classZPack_1_1Reader_a4826745b200b1fcf17a036b5b03c0f4c}{read\+CDR}} (uint64\+\_\+t cdr\+Offset, Entry\+List \&entry\+List)
+\item 
+int \mbox{\hyperlink{classZPack_1_1Reader_ac8fbd3728aad6e180a564027e8c81092}{unpack\+File}} (const \mbox{\hyperlink{structZPack_1_1FileInfo}{File\+Info}} $\ast$info, std\+::ostream \&dst)
+\item 
+int \mbox{\hyperlink{classZPack_1_1Reader_a221024890de046d62b858cac1856234a}{unpack\+File}} (const \mbox{\hyperlink{structZPack_1_1FileInfo}{File\+Info}} $\ast$info, char $\ast$dst, size\+\_\+t dst\+Capacity)
+\item 
+int \mbox{\hyperlink{classZPack_1_1Reader_ae9effd91921673d64d771927603dff2a}{unpack\+File}} (const std\+::string \&filename, std\+::ostream \&dst)
+\item 
+int \mbox{\hyperlink{classZPack_1_1Reader_a312396fb53b30b7dad35d4012b1e7251}{unpack\+File}} (const std\+::string \&filename, char $\ast$dst, size\+\_\+t dst\+Capacity)
+\item 
+int \mbox{\hyperlink{classZPack_1_1Reader_a483949fbd02f73ac4ee897a32926e16e}{unpack\+File\+Stream}} (const \mbox{\hyperlink{structZPack_1_1FileInfo}{File\+Info}} $\ast$info, std\+::ostream \&dst)
+\item 
+int \mbox{\hyperlink{classZPack_1_1Reader_a1e6eb1681a369630593dd949d2d8e297}{unpack\+File\+Stream}} (const \mbox{\hyperlink{structZPack_1_1FileInfo}{File\+Info}} $\ast$info, char $\ast$dst, size\+\_\+t dst\+Capacity)
+\item 
+int \mbox{\hyperlink{classZPack_1_1Reader_ab7ebe450b78dba89adabe1211d3b5914}{unpack\+File\+Stream}} (const std\+::string \&filename, std\+::ostream \&dst)
+\item 
+int \mbox{\hyperlink{classZPack_1_1Reader_ab78b3a41c5573329bda1c7c1a30a104a}{unpack\+File\+Stream}} (const std\+::string \&filename, char $\ast$dst, size\+\_\+t dst\+Capacity)
+\item 
+const \mbox{\hyperlink{structZPack_1_1FileInfo}{File\+Info}} $\ast$ \mbox{\hyperlink{classZPack_1_1Reader_a95e8b49baed4c421df82eb3e03783ef7}{get\+File\+Info}} (const std\+::string \&filename)
+\item 
+bool \mbox{\hyperlink{classZPack_1_1Reader_a8a7f46ef1f20101543c1531b7778cb09}{contains}} (const std\+::string \&filename)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classZPack_1_1Reader_ab23c89ff294666974cb28ebdd009d031}{get\+File\+Uncomp\+Size}} (const std\+::string \&filename)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classZPack_1_1Reader_a1c99a869a186c04b2762c7c54bd07b28}{get\+File\+Comp\+Size}} (const std\+::string \&filename)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classZPack_1_1Reader_aae5fbdfc9efa4a902c80cbf42c715214}{get\+Uncomp\+Size}} ()
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classZPack_1_1Reader_ab749789b657755ba9ce25c75b5af4286}{get\+Comp\+Size}} ()
+\item 
+std\+::ifstream \& \mbox{\hyperlink{classZPack_1_1Reader_a0c91e42445f4ad46dd9d17fadc86afda}{get\+File\+Stream}} ()
+\item 
+Entry\+List \mbox{\hyperlink{classZPack_1_1Reader_ac15c3c82c9dcde012246b4b41f1291d6}{get\+Entry\+List}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Archive reader. 
+
+Usage example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Open the archive}}
+\DoxyCodeLine{\mbox{\hyperlink{classZPack_1_1Reader}{ZPack::Reader}} reader(\textcolor{stringliteral}{"{}archive.zpk"{}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Unpack files}}
+\DoxyCodeLine{std::ifstream file(\textcolor{stringliteral}{"{}file.txt"{}});}
+\DoxyCodeLine{reader.unpackFile(\textcolor{stringliteral}{"{}path/to/file.txt"{}}, file);}
+\DoxyCodeLine{file.close();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Streaming API}}
+\DoxyCodeLine{std::ifstream file2(\textcolor{stringliteral}{"{}file2.txt"{}});}
+\DoxyCodeLine{reader.unpackFileStream(\textcolor{stringliteral}{"{}path/to/file2.txt"{}}, file2);}
+\DoxyCodeLine{file2.close();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Close the file}}
+\DoxyCodeLine{reader.closeFile();}
+
+\end{DoxyCode}
+ The reader can be reused as many times as you want. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classZPack_1_1Reader_a7a90682fa308d0b89f310c155ba4b0f1}\label{classZPack_1_1Reader_a7a90682fa308d0b89f310c155ba4b0f1}} 
+\index{ZPack::Reader@{ZPack::Reader}!openFile@{openFile}}
+\index{openFile@{openFile}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{openFile()}{openFile()}}
+{\footnotesize\ttfamily int ZPack\+::\+Reader\+::open\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Open an archive for reading. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_ac965678f0f3d397c2b39527d325db23e}\label{classZPack_1_1Reader_ac965678f0f3d397c2b39527d325db23e}} 
+\index{ZPack::Reader@{ZPack::Reader}!closeFile@{closeFile}}
+\index{closeFile@{closeFile}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{closeFile()}{closeFile()}}
+{\footnotesize\ttfamily void ZPack\+::\+Reader\+::close\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Closes the archive and resets the reader to its initial state. \mbox{\Hypertarget{classZPack_1_1Reader_ae72b0bff505d8cc4bb70f12568dc8ea8}\label{classZPack_1_1Reader_ae72b0bff505d8cc4bb70f12568dc8ea8}} 
+\index{ZPack::Reader@{ZPack::Reader}!readHeader@{readHeader}}
+\index{readHeader@{readHeader}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{readHeader()}{readHeader()}}
+{\footnotesize\ttfamily int ZPack\+::\+Reader\+::read\+Header (\begin{DoxyParamCaption}\item[{uint16\+\_\+t \&}]{req\+Version }\end{DoxyParamCaption})}
+
+Read the header of an archive. 
+\begin{DoxyParams}{Parameters}
+{\em req\+Version} & (Output) Required version to read the file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_a1c62dc9831d48068bd332b3672d9d4b4}\label{classZPack_1_1Reader_a1c62dc9831d48068bd332b3672d9d4b4}} 
+\index{ZPack::Reader@{ZPack::Reader}!readEOCDR@{readEOCDR}}
+\index{readEOCDR@{readEOCDR}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{readEOCDR()}{readEOCDR()}}
+{\footnotesize\ttfamily int ZPack\+::\+Reader\+::read\+EOCDR (\begin{DoxyParamCaption}\item[{uint64\+\_\+t \&}]{cdr\+Offset }\end{DoxyParamCaption})}
+
+Read the end of central directory record of an archive. 
+\begin{DoxyParams}{Parameters}
+{\em cdr\+Offset} & (Output) Offset of the central directory record in the archive. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_a4826745b200b1fcf17a036b5b03c0f4c}\label{classZPack_1_1Reader_a4826745b200b1fcf17a036b5b03c0f4c}} 
+\index{ZPack::Reader@{ZPack::Reader}!readCDR@{readCDR}}
+\index{readCDR@{readCDR}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{readCDR()}{readCDR()}}
+{\footnotesize\ttfamily int ZPack\+::\+Reader\+::read\+CDR (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{cdr\+Offset,  }\item[{Entry\+List \&}]{entry\+List }\end{DoxyParamCaption})}
+
+Read central directory record of an archive. 
+\begin{DoxyParams}{Parameters}
+{\em cdr\+Offset} & Offset of the central directory record in the archive. \\
+\hline
+{\em entry\+List} & (Output) List of entries in the CDR. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_ac8fbd3728aad6e180a564027e8c81092}\label{classZPack_1_1Reader_ac8fbd3728aad6e180a564027e8c81092}} 
+\index{ZPack::Reader@{ZPack::Reader}!unpackFile@{unpackFile}}
+\index{unpackFile@{unpackFile}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{unpackFile()}{unpackFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily int ZPack\+::\+Reader\+::unpack\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structZPack_1_1FileInfo}{File\+Info}} $\ast$}]{info,  }\item[{std\+::ostream \&}]{dst }\end{DoxyParamCaption})}
+
+Unpack a file into a stream. 
+\begin{DoxyParams}{Parameters}
+{\em info} & Information about the file. \\
+\hline
+{\em dst} & The ostream to write to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_a221024890de046d62b858cac1856234a}\label{classZPack_1_1Reader_a221024890de046d62b858cac1856234a}} 
+\index{ZPack::Reader@{ZPack::Reader}!unpackFile@{unpackFile}}
+\index{unpackFile@{unpackFile}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{unpackFile()}{unpackFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily int ZPack\+::\+Reader\+::unpack\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structZPack_1_1FileInfo}{File\+Info}} $\ast$}]{info,  }\item[{char $\ast$}]{dst,  }\item[{size\+\_\+t}]{dst\+Capacity }\end{DoxyParamCaption})}
+
+Unpack a file into a buffer. 
+\begin{DoxyParams}{Parameters}
+{\em info} & Information about the file. \\
+\hline
+{\em dst} & The char$\ast$ buffer to write to. \\
+\hline
+{\em dst\+Capacity} & The size of the buffer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_ae9effd91921673d64d771927603dff2a}\label{classZPack_1_1Reader_ae9effd91921673d64d771927603dff2a}} 
+\index{ZPack::Reader@{ZPack::Reader}!unpackFile@{unpackFile}}
+\index{unpackFile@{unpackFile}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{unpackFile()}{unpackFile()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily int ZPack\+::\+Reader\+::unpack\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{std\+::ostream \&}]{dst }\end{DoxyParamCaption})}
+
+Unpack a file into a stream. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file. \\
+\hline
+{\em dst} & The ostream to write to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_a312396fb53b30b7dad35d4012b1e7251}\label{classZPack_1_1Reader_a312396fb53b30b7dad35d4012b1e7251}} 
+\index{ZPack::Reader@{ZPack::Reader}!unpackFile@{unpackFile}}
+\index{unpackFile@{unpackFile}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{unpackFile()}{unpackFile()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily int ZPack\+::\+Reader\+::unpack\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{char $\ast$}]{dst,  }\item[{size\+\_\+t}]{dst\+Capacity }\end{DoxyParamCaption})}
+
+Unpack a file into a char$\ast$ buffer. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file. \\
+\hline
+{\em dst} & The char$\ast$ buffer to write to. \\
+\hline
+{\em dst\+Capacity} & The size of the buffer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_a483949fbd02f73ac4ee897a32926e16e}\label{classZPack_1_1Reader_a483949fbd02f73ac4ee897a32926e16e}} 
+\index{ZPack::Reader@{ZPack::Reader}!unpackFileStream@{unpackFileStream}}
+\index{unpackFileStream@{unpackFileStream}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{unpackFileStream()}{unpackFileStream()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily int ZPack\+::\+Reader\+::unpack\+File\+Stream (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structZPack_1_1FileInfo}{File\+Info}} $\ast$}]{info,  }\item[{std\+::ostream \&}]{dst }\end{DoxyParamCaption})}
+
+Unpack a file into a stream.~\newline
+This is the streaming variant which uses ZSTD\textquotesingle{}s streaming API. 
+\begin{DoxyParams}{Parameters}
+{\em info} & Information about the file. \\
+\hline
+{\em dst} & The ostream to write to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_a1e6eb1681a369630593dd949d2d8e297}\label{classZPack_1_1Reader_a1e6eb1681a369630593dd949d2d8e297}} 
+\index{ZPack::Reader@{ZPack::Reader}!unpackFileStream@{unpackFileStream}}
+\index{unpackFileStream@{unpackFileStream}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{unpackFileStream()}{unpackFileStream()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily int ZPack\+::\+Reader\+::unpack\+File\+Stream (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structZPack_1_1FileInfo}{File\+Info}} $\ast$}]{info,  }\item[{char $\ast$}]{dst,  }\item[{size\+\_\+t}]{dst\+Capacity }\end{DoxyParamCaption})}
+
+Unpack a file into a buffer.~\newline
+This is the streaming variant which uses ZSTD\textquotesingle{}s streaming API. 
+\begin{DoxyParams}{Parameters}
+{\em info} & Information about the file. \\
+\hline
+{\em dst} & The char$\ast$ buffer to write to. \\
+\hline
+{\em dst\+Capacity} & The size of the buffer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_ab7ebe450b78dba89adabe1211d3b5914}\label{classZPack_1_1Reader_ab7ebe450b78dba89adabe1211d3b5914}} 
+\index{ZPack::Reader@{ZPack::Reader}!unpackFileStream@{unpackFileStream}}
+\index{unpackFileStream@{unpackFileStream}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{unpackFileStream()}{unpackFileStream()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily int ZPack\+::\+Reader\+::unpack\+File\+Stream (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{std\+::ostream \&}]{dst }\end{DoxyParamCaption})}
+
+Unpack a file into a stream.~\newline
+This is the streaming variant which uses ZSTD\textquotesingle{}s streaming API. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file. \\
+\hline
+{\em dst} & The ostream to write to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_ab78b3a41c5573329bda1c7c1a30a104a}\label{classZPack_1_1Reader_ab78b3a41c5573329bda1c7c1a30a104a}} 
+\index{ZPack::Reader@{ZPack::Reader}!unpackFileStream@{unpackFileStream}}
+\index{unpackFileStream@{unpackFileStream}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{unpackFileStream()}{unpackFileStream()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily int ZPack\+::\+Reader\+::unpack\+File\+Stream (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{char $\ast$}]{dst,  }\item[{size\+\_\+t}]{dst\+Capacity }\end{DoxyParamCaption})}
+
+Unpack a file into a char$\ast$ buffer.~\newline
+This is the streaming variant which uses ZSTD\textquotesingle{}s streaming API. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file. \\
+\hline
+{\em dst} & The char$\ast$ buffer to write to. \\
+\hline
+{\em dst\+Capacity} & The size of the buffer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_a95e8b49baed4c421df82eb3e03783ef7}\label{classZPack_1_1Reader_a95e8b49baed4c421df82eb3e03783ef7}} 
+\index{ZPack::Reader@{ZPack::Reader}!getFileInfo@{getFileInfo}}
+\index{getFileInfo@{getFileInfo}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{getFileInfo()}{getFileInfo()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structZPack_1_1FileInfo}{File\+Info}}$\ast$ ZPack\+::\+Reader\+::get\+File\+Info (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Get a file\textquotesingle{}s information. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_a8a7f46ef1f20101543c1531b7778cb09}\label{classZPack_1_1Reader_a8a7f46ef1f20101543c1531b7778cb09}} 
+\index{ZPack::Reader@{ZPack::Reader}!contains@{contains}}
+\index{contains@{contains}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool ZPack\+::\+Reader\+::contains (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Check if the archive contains a file. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_ab23c89ff294666974cb28ebdd009d031}\label{classZPack_1_1Reader_ab23c89ff294666974cb28ebdd009d031}} 
+\index{ZPack::Reader@{ZPack::Reader}!getFileUncompSize@{getFileUncompSize}}
+\index{getFileUncompSize@{getFileUncompSize}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{getFileUncompSize()}{getFileUncompSize()}}
+{\footnotesize\ttfamily uint64\+\_\+t ZPack\+::\+Reader\+::get\+File\+Uncomp\+Size (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Get the file\textquotesingle{}s uncompressed size. Shorthand for Get\+File\+Info(filename)-\/$>$uncomp\+Size. Returns 0 if the file does not exist. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_a1c99a869a186c04b2762c7c54bd07b28}\label{classZPack_1_1Reader_a1c99a869a186c04b2762c7c54bd07b28}} 
+\index{ZPack::Reader@{ZPack::Reader}!getFileCompSize@{getFileCompSize}}
+\index{getFileCompSize@{getFileCompSize}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{getFileCompSize()}{getFileCompSize()}}
+{\footnotesize\ttfamily uint64\+\_\+t ZPack\+::\+Reader\+::get\+File\+Comp\+Size (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Get the file\textquotesingle{}s compressed size. Shorthand for Get\+File\+Info(filename)-\/$>$comp\+Size. Returns 0 if the file does not exist. 
+\begin{DoxyParams}{Parameters}
+{\em filename} & Name of the file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classZPack_1_1Reader_aae5fbdfc9efa4a902c80cbf42c715214}\label{classZPack_1_1Reader_aae5fbdfc9efa4a902c80cbf42c715214}} 
+\index{ZPack::Reader@{ZPack::Reader}!getUncompSize@{getUncompSize}}
+\index{getUncompSize@{getUncompSize}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{getUncompSize()}{getUncompSize()}}
+{\footnotesize\ttfamily uint64\+\_\+t ZPack\+::\+Reader\+::get\+Uncomp\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the total uncompressed size of the archive\textquotesingle{}s files. \mbox{\Hypertarget{classZPack_1_1Reader_ab749789b657755ba9ce25c75b5af4286}\label{classZPack_1_1Reader_ab749789b657755ba9ce25c75b5af4286}} 
+\index{ZPack::Reader@{ZPack::Reader}!getCompSize@{getCompSize}}
+\index{getCompSize@{getCompSize}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{getCompSize()}{getCompSize()}}
+{\footnotesize\ttfamily uint64\+\_\+t ZPack\+::\+Reader\+::get\+Comp\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the total compressed size of the archive\textquotesingle{}s files. \mbox{\Hypertarget{classZPack_1_1Reader_a0c91e42445f4ad46dd9d17fadc86afda}\label{classZPack_1_1Reader_a0c91e42445f4ad46dd9d17fadc86afda}} 
+\index{ZPack::Reader@{ZPack::Reader}!getFileStream@{getFileStream}}
+\index{getFileStream@{getFileStream}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{getFileStream()}{getFileStream()}}
+{\footnotesize\ttfamily std\+::ifstream\& ZPack\+::\+Reader\+::get\+File\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the underlying output file stream. \mbox{\Hypertarget{classZPack_1_1Reader_ac15c3c82c9dcde012246b4b41f1291d6}\label{classZPack_1_1Reader_ac15c3c82c9dcde012246b4b41f1291d6}} 
+\index{ZPack::Reader@{ZPack::Reader}!getEntryList@{getEntryList}}
+\index{getEntryList@{getEntryList}!ZPack::Reader@{ZPack::Reader}}
+\doxysubsubsection{\texorpdfstring{getEntryList()}{getEntryList()}}
+{\footnotesize\ttfamily Entry\+List ZPack\+::\+Reader\+::get\+Entry\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the list of file entries. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{zpack_8h}{zpack.\+h}}\end{DoxyCompactItemize}

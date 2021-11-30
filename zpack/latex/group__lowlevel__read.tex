@@ -1,0 +1,215 @@
+\hypertarget{group__lowlevel__read}{}\doxysection{Low-\/level Reading Functions}
+\label{group__lowlevel__read}\index{Low-\/level Reading Functions@{Low-\/level Reading Functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{group__lowlevel__read_ga86b0de334257aae56b762a6fb9a1869c}{zpack\+\_\+read\+\_\+header\+\_\+memory}} (const zpack\+\_\+u8 $\ast$buffer, zpack\+\_\+u16 $\ast$version)
+\item 
+int \mbox{\hyperlink{group__lowlevel__read_ga8be7831c3eb5f7339138d4e7650c10d5}{zpack\+\_\+read\+\_\+header}} (FILE $\ast$fp, zpack\+\_\+u16 $\ast$version)
+\item 
+int \mbox{\hyperlink{group__lowlevel__read_ga956f9dabbfef272dd070f2f1ebcafe47}{zpack\+\_\+read\+\_\+data\+\_\+header\+\_\+memory}} (const zpack\+\_\+u8 $\ast$buffer)
+\item 
+int \mbox{\hyperlink{group__lowlevel__read_ga1fd83f75c0fa22709e3b7738db413223}{zpack\+\_\+read\+\_\+data\+\_\+header}} (FILE $\ast$fp)
+\item 
+int \mbox{\hyperlink{group__lowlevel__read_ga108f5200201ffba8ad4ccb5b6c6af7db}{zpack\+\_\+read\+\_\+eocdr\+\_\+memory}} (const zpack\+\_\+u8 $\ast$buffer, zpack\+\_\+u64 $\ast$cdr\+\_\+offset)
+\item 
+int \mbox{\hyperlink{group__lowlevel__read_ga5f2fe0cf208f89dfcee19bf55d84e6db}{zpack\+\_\+read\+\_\+eocdr}} (FILE $\ast$fp, zpack\+\_\+u64 eocdr\+\_\+offset, zpack\+\_\+u64 $\ast$cdr\+\_\+offset)
+\item 
+int \mbox{\hyperlink{group__lowlevel__read_ga5f52c3b81176dadfe3efb80438cd1b4f}{zpack\+\_\+read\+\_\+cdr\+\_\+header\+\_\+memory}} (const zpack\+\_\+u8 $\ast$buffer, zpack\+\_\+u64 $\ast$count, zpack\+\_\+u64 $\ast$block\+\_\+size)
+\item 
+int \mbox{\hyperlink{group__lowlevel__read_ga2e556bc5af811c1441aa7431c303e269}{zpack\+\_\+read\+\_\+file\+\_\+entry\+\_\+memory}} (const zpack\+\_\+u8 $\ast$buffer, zpack\+\_\+u64 $\ast$size\+\_\+left, \mbox{\hyperlink{structzpack__file__entry__s}{zpack\+\_\+file\+\_\+entry}} $\ast$entry, size\+\_\+t $\ast$entry\+\_\+size)
+\item 
+int \mbox{\hyperlink{group__lowlevel__read_ga0bcf1303e3630b67e062304641aa60f7}{zpack\+\_\+read\+\_\+file\+\_\+entries\+\_\+memory}} (const zpack\+\_\+u8 $\ast$buffer, \mbox{\hyperlink{structzpack__file__entry__s}{zpack\+\_\+file\+\_\+entry}} $\ast$$\ast$entries, zpack\+\_\+u64 header\+\_\+count, zpack\+\_\+u64 block\+\_\+size, zpack\+\_\+u64 $\ast$count, zpack\+\_\+u64 $\ast$total\+\_\+cs, zpack\+\_\+u64 $\ast$total\+\_\+us)
+\item 
+int \mbox{\hyperlink{group__lowlevel__read_ga6d7602a917a47ac221e2641eeef215a8}{zpack\+\_\+read\+\_\+cdr\+\_\+memory}} (const zpack\+\_\+u8 $\ast$buffer, size\+\_\+t size\+\_\+left, \mbox{\hyperlink{structzpack__file__entry__s}{zpack\+\_\+file\+\_\+entry}} $\ast$$\ast$entries, zpack\+\_\+u64 $\ast$count, zpack\+\_\+u64 $\ast$total\+\_\+cs, zpack\+\_\+u64 $\ast$total\+\_\+us)
+\item 
+int \mbox{\hyperlink{group__lowlevel__read_ga3f951728c2fbfb00794a52158509fbd5}{zpack\+\_\+read\+\_\+cdr}} (FILE $\ast$fp, zpack\+\_\+u64 cdr\+\_\+offset, \mbox{\hyperlink{structzpack__file__entry__s}{zpack\+\_\+file\+\_\+entry}} $\ast$$\ast$entries, zpack\+\_\+u64 $\ast$count, zpack\+\_\+u64 $\ast$total\+\_\+cs, zpack\+\_\+u64 $\ast$total\+\_\+us)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+These are advanced reading functions that requires you to manage data manually. For a more conventional way to read archives, see \mbox{\hyperlink{group__reader}{Reader}} 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__lowlevel__read_ga86b0de334257aae56b762a6fb9a1869c}\label{group__lowlevel__read_ga86b0de334257aae56b762a6fb9a1869c}} 
+\index{Low-\/level Reading Functions@{Low-\/level Reading Functions}!zpack\_read\_header\_memory@{zpack\_read\_header\_memory}}
+\index{zpack\_read\_header\_memory@{zpack\_read\_header\_memory}!Low-\/level Reading Functions@{Low-\/level Reading Functions}}
+\doxysubsubsection{\texorpdfstring{zpack\_read\_header\_memory()}{zpack\_read\_header\_memory()}}
+{\footnotesize\ttfamily int zpack\+\_\+read\+\_\+header\+\_\+memory (\begin{DoxyParamCaption}\item[{const zpack\+\_\+u8 $\ast$}]{buffer,  }\item[{zpack\+\_\+u16 $\ast$}]{version }\end{DoxyParamCaption})}
+
+Read the header from memory. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read from. \\
+\hline
+{\em version} & Version of the archive. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__lowlevel__read_ga8be7831c3eb5f7339138d4e7650c10d5}\label{group__lowlevel__read_ga8be7831c3eb5f7339138d4e7650c10d5}} 
+\index{Low-\/level Reading Functions@{Low-\/level Reading Functions}!zpack\_read\_header@{zpack\_read\_header}}
+\index{zpack\_read\_header@{zpack\_read\_header}!Low-\/level Reading Functions@{Low-\/level Reading Functions}}
+\doxysubsubsection{\texorpdfstring{zpack\_read\_header()}{zpack\_read\_header()}}
+{\footnotesize\ttfamily int zpack\+\_\+read\+\_\+header (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fp,  }\item[{zpack\+\_\+u16 $\ast$}]{version }\end{DoxyParamCaption})}
+
+Read the header from a file stream. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & The file to read from. \\
+\hline
+{\em version} & Version of the archive. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__lowlevel__read_ga956f9dabbfef272dd070f2f1ebcafe47}\label{group__lowlevel__read_ga956f9dabbfef272dd070f2f1ebcafe47}} 
+\index{Low-\/level Reading Functions@{Low-\/level Reading Functions}!zpack\_read\_data\_header\_memory@{zpack\_read\_data\_header\_memory}}
+\index{zpack\_read\_data\_header\_memory@{zpack\_read\_data\_header\_memory}!Low-\/level Reading Functions@{Low-\/level Reading Functions}}
+\doxysubsubsection{\texorpdfstring{zpack\_read\_data\_header\_memory()}{zpack\_read\_data\_header\_memory()}}
+{\footnotesize\ttfamily int zpack\+\_\+read\+\_\+data\+\_\+header\+\_\+memory (\begin{DoxyParamCaption}\item[{const zpack\+\_\+u8 $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+Read and verify the data header from memory. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read from. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__lowlevel__read_ga1fd83f75c0fa22709e3b7738db413223}\label{group__lowlevel__read_ga1fd83f75c0fa22709e3b7738db413223}} 
+\index{Low-\/level Reading Functions@{Low-\/level Reading Functions}!zpack\_read\_data\_header@{zpack\_read\_data\_header}}
+\index{zpack\_read\_data\_header@{zpack\_read\_data\_header}!Low-\/level Reading Functions@{Low-\/level Reading Functions}}
+\doxysubsubsection{\texorpdfstring{zpack\_read\_data\_header()}{zpack\_read\_data\_header()}}
+{\footnotesize\ttfamily int zpack\+\_\+read\+\_\+data\+\_\+header (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+Read and verify the data header from a file stream. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & The file to read from. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__lowlevel__read_ga108f5200201ffba8ad4ccb5b6c6af7db}\label{group__lowlevel__read_ga108f5200201ffba8ad4ccb5b6c6af7db}} 
+\index{Low-\/level Reading Functions@{Low-\/level Reading Functions}!zpack\_read\_eocdr\_memory@{zpack\_read\_eocdr\_memory}}
+\index{zpack\_read\_eocdr\_memory@{zpack\_read\_eocdr\_memory}!Low-\/level Reading Functions@{Low-\/level Reading Functions}}
+\doxysubsubsection{\texorpdfstring{zpack\_read\_eocdr\_memory()}{zpack\_read\_eocdr\_memory()}}
+{\footnotesize\ttfamily int zpack\+\_\+read\+\_\+eocdr\+\_\+memory (\begin{DoxyParamCaption}\item[{const zpack\+\_\+u8 $\ast$}]{buffer,  }\item[{zpack\+\_\+u64 $\ast$}]{cdr\+\_\+offset }\end{DoxyParamCaption})}
+
+Read the end of central directory record from memory. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read from. \\
+\hline
+{\em cdr\+\_\+offset} & Offset of the central directory record from the start of the archive. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__lowlevel__read_ga5f2fe0cf208f89dfcee19bf55d84e6db}\label{group__lowlevel__read_ga5f2fe0cf208f89dfcee19bf55d84e6db}} 
+\index{Low-\/level Reading Functions@{Low-\/level Reading Functions}!zpack\_read\_eocdr@{zpack\_read\_eocdr}}
+\index{zpack\_read\_eocdr@{zpack\_read\_eocdr}!Low-\/level Reading Functions@{Low-\/level Reading Functions}}
+\doxysubsubsection{\texorpdfstring{zpack\_read\_eocdr()}{zpack\_read\_eocdr()}}
+{\footnotesize\ttfamily int zpack\+\_\+read\+\_\+eocdr (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fp,  }\item[{zpack\+\_\+u64}]{eocdr\+\_\+offset,  }\item[{zpack\+\_\+u64 $\ast$}]{cdr\+\_\+offset }\end{DoxyParamCaption})}
+
+Read the end of central directory record from a file stream. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & The file to read from. \\
+\hline
+{\em eocdr\+\_\+offset} & Offset of the end of central directory record from the start of the archive. \\
+\hline
+{\em cdr\+\_\+offset} & Offset of the central directory record from the start of the archive. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__lowlevel__read_ga5f52c3b81176dadfe3efb80438cd1b4f}\label{group__lowlevel__read_ga5f52c3b81176dadfe3efb80438cd1b4f}} 
+\index{Low-\/level Reading Functions@{Low-\/level Reading Functions}!zpack\_read\_cdr\_header\_memory@{zpack\_read\_cdr\_header\_memory}}
+\index{zpack\_read\_cdr\_header\_memory@{zpack\_read\_cdr\_header\_memory}!Low-\/level Reading Functions@{Low-\/level Reading Functions}}
+\doxysubsubsection{\texorpdfstring{zpack\_read\_cdr\_header\_memory()}{zpack\_read\_cdr\_header\_memory()}}
+{\footnotesize\ttfamily int zpack\+\_\+read\+\_\+cdr\+\_\+header\+\_\+memory (\begin{DoxyParamCaption}\item[{const zpack\+\_\+u8 $\ast$}]{buffer,  }\item[{zpack\+\_\+u64 $\ast$}]{count,  }\item[{zpack\+\_\+u64 $\ast$}]{block\+\_\+size }\end{DoxyParamCaption})}
+
+Read the central directory record\textquotesingle{}s header from memory. Note that this function is used automatically by both zpack\+\_\+read\+\_\+cdr\+\_\+memory and zpack\+\_\+read\+\_\+cdr. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read from. \\
+\hline
+{\em count} & The number of file entries. \\
+\hline
+{\em block\+\_\+size} & Size of the entire block (excluding the header) \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__lowlevel__read_ga6d7602a917a47ac221e2641eeef215a8}{zpack\+\_\+read\+\_\+cdr\+\_\+memory}}, \mbox{\hyperlink{group__lowlevel__read_ga3f951728c2fbfb00794a52158509fbd5}{zpack\+\_\+read\+\_\+cdr}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__lowlevel__read_ga2e556bc5af811c1441aa7431c303e269}\label{group__lowlevel__read_ga2e556bc5af811c1441aa7431c303e269}} 
+\index{Low-\/level Reading Functions@{Low-\/level Reading Functions}!zpack\_read\_file\_entry\_memory@{zpack\_read\_file\_entry\_memory}}
+\index{zpack\_read\_file\_entry\_memory@{zpack\_read\_file\_entry\_memory}!Low-\/level Reading Functions@{Low-\/level Reading Functions}}
+\doxysubsubsection{\texorpdfstring{zpack\_read\_file\_entry\_memory()}{zpack\_read\_file\_entry\_memory()}}
+{\footnotesize\ttfamily int zpack\+\_\+read\+\_\+file\+\_\+entry\+\_\+memory (\begin{DoxyParamCaption}\item[{const zpack\+\_\+u8 $\ast$}]{buffer,  }\item[{zpack\+\_\+u64 $\ast$}]{size\+\_\+left,  }\item[{\mbox{\hyperlink{structzpack__file__entry__s}{zpack\+\_\+file\+\_\+entry}} $\ast$}]{entry,  }\item[{size\+\_\+t $\ast$}]{entry\+\_\+size }\end{DoxyParamCaption})}
+
+Read a single file entry from memory. Note that this function is used automatically by both zpack\+\_\+read\+\_\+cdr\+\_\+memory and zpack\+\_\+read\+\_\+cdr. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read from. \\
+\hline
+{\em size\+\_\+left} & The size remaining of the buffer containing the block. Will be checked against and subtracted by the entry size. \\
+\hline
+{\em entry} & The file entry. \\
+\hline
+{\em entry\+\_\+size} & Size of the entry in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__lowlevel__read_ga6d7602a917a47ac221e2641eeef215a8}{zpack\+\_\+read\+\_\+cdr\+\_\+memory}}, \mbox{\hyperlink{group__lowlevel__read_ga3f951728c2fbfb00794a52158509fbd5}{zpack\+\_\+read\+\_\+cdr}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__lowlevel__read_ga0bcf1303e3630b67e062304641aa60f7}\label{group__lowlevel__read_ga0bcf1303e3630b67e062304641aa60f7}} 
+\index{Low-\/level Reading Functions@{Low-\/level Reading Functions}!zpack\_read\_file\_entries\_memory@{zpack\_read\_file\_entries\_memory}}
+\index{zpack\_read\_file\_entries\_memory@{zpack\_read\_file\_entries\_memory}!Low-\/level Reading Functions@{Low-\/level Reading Functions}}
+\doxysubsubsection{\texorpdfstring{zpack\_read\_file\_entries\_memory()}{zpack\_read\_file\_entries\_memory()}}
+{\footnotesize\ttfamily int zpack\+\_\+read\+\_\+file\+\_\+entries\+\_\+memory (\begin{DoxyParamCaption}\item[{const zpack\+\_\+u8 $\ast$}]{buffer,  }\item[{\mbox{\hyperlink{structzpack__file__entry__s}{zpack\+\_\+file\+\_\+entry}} $\ast$$\ast$}]{entries,  }\item[{zpack\+\_\+u64}]{header\+\_\+count,  }\item[{zpack\+\_\+u64}]{block\+\_\+size,  }\item[{zpack\+\_\+u64 $\ast$}]{count,  }\item[{zpack\+\_\+u64 $\ast$}]{total\+\_\+cs,  }\item[{zpack\+\_\+u64 $\ast$}]{total\+\_\+us }\end{DoxyParamCaption})}
+
+Read all file entries from memory. Note that this function is used automatically by both zpack\+\_\+read\+\_\+cdr\+\_\+memory and zpack\+\_\+read\+\_\+cdr. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read from. \\
+\hline
+{\em entries} & The file entries. \\
+\hline
+{\em header\+\_\+count} & Expected number of file entries (from the header) \\
+\hline
+{\em block\+\_\+size} & Size of the entire block. \\
+\hline
+{\em count} & Number of file entries read (0 \texorpdfstring{$<$}{<}= count \texorpdfstring{$<$}{<}= header\+\_\+count) \\
+\hline
+{\em total\+\_\+cs} & The total compressed size of all files in the archive. \\
+\hline
+{\em total\+\_\+us} & The total uncompressed size of all files in the archive. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__lowlevel__read_ga6d7602a917a47ac221e2641eeef215a8}{zpack\+\_\+read\+\_\+cdr\+\_\+memory}}, \mbox{\hyperlink{group__lowlevel__read_ga3f951728c2fbfb00794a52158509fbd5}{zpack\+\_\+read\+\_\+cdr}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__lowlevel__read_ga6d7602a917a47ac221e2641eeef215a8}\label{group__lowlevel__read_ga6d7602a917a47ac221e2641eeef215a8}} 
+\index{Low-\/level Reading Functions@{Low-\/level Reading Functions}!zpack\_read\_cdr\_memory@{zpack\_read\_cdr\_memory}}
+\index{zpack\_read\_cdr\_memory@{zpack\_read\_cdr\_memory}!Low-\/level Reading Functions@{Low-\/level Reading Functions}}
+\doxysubsubsection{\texorpdfstring{zpack\_read\_cdr\_memory()}{zpack\_read\_cdr\_memory()}}
+{\footnotesize\ttfamily int zpack\+\_\+read\+\_\+cdr\+\_\+memory (\begin{DoxyParamCaption}\item[{const zpack\+\_\+u8 $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size\+\_\+left,  }\item[{\mbox{\hyperlink{structzpack__file__entry__s}{zpack\+\_\+file\+\_\+entry}} $\ast$$\ast$}]{entries,  }\item[{zpack\+\_\+u64 $\ast$}]{count,  }\item[{zpack\+\_\+u64 $\ast$}]{total\+\_\+cs,  }\item[{zpack\+\_\+u64 $\ast$}]{total\+\_\+us }\end{DoxyParamCaption})}
+
+Read the central directory record from memory. 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read from. \\
+\hline
+{\em size\+\_\+left} & Number of bytes left from the current buffer position. Used for bounds checking. Note\+: This function does bounds checking by the fact that CDRs have an undetermined size. Other functions requires that you do bounds checking manually. \\
+\hline
+{\em entries} & The file entries. \\
+\hline
+{\em count} & Number of file entries. \\
+\hline
+{\em total\+\_\+cs} & The total compressed size of all files in the archive. \\
+\hline
+{\em total\+\_\+us} & The total uncompressed size of all files in the archive. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__lowlevel__read_ga3f951728c2fbfb00794a52158509fbd5}\label{group__lowlevel__read_ga3f951728c2fbfb00794a52158509fbd5}} 
+\index{Low-\/level Reading Functions@{Low-\/level Reading Functions}!zpack\_read\_cdr@{zpack\_read\_cdr}}
+\index{zpack\_read\_cdr@{zpack\_read\_cdr}!Low-\/level Reading Functions@{Low-\/level Reading Functions}}
+\doxysubsubsection{\texorpdfstring{zpack\_read\_cdr()}{zpack\_read\_cdr()}}
+{\footnotesize\ttfamily int zpack\+\_\+read\+\_\+cdr (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{fp,  }\item[{zpack\+\_\+u64}]{cdr\+\_\+offset,  }\item[{\mbox{\hyperlink{structzpack__file__entry__s}{zpack\+\_\+file\+\_\+entry}} $\ast$$\ast$}]{entries,  }\item[{zpack\+\_\+u64 $\ast$}]{count,  }\item[{zpack\+\_\+u64 $\ast$}]{total\+\_\+cs,  }\item[{zpack\+\_\+u64 $\ast$}]{total\+\_\+us }\end{DoxyParamCaption})}
+
+Read the central directory record from a file stream. 
+\begin{DoxyParams}{Parameters}
+{\em fp} & The file to read from. \\
+\hline
+{\em cdr\+\_\+offset} & Offset of the central directory record from the start of the archive. \\
+\hline
+{\em entries} & The file entries. \\
+\hline
+{\em count} & Number of file entries. \\
+\hline
+{\em total\+\_\+cs} & The total compressed size of all files in the archive. \\
+\hline
+{\em total\+\_\+us} & The total uncompressed size of all files in the archive. \\
+\hline
+\end{DoxyParams}
