@@ -131,8 +131,8 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >The archive writer.<br  />
 Thread safety: <b>Not thread safe.</b><br  />
-zpack_writer depends on a write_offset variable to know where to write next. Running multiple write operations at the same time will result in undefined behavior.<br  />
-Note that there are no restrictions on the ordering of each block while writing the archive, so make sure to follow the correct order.<br  />
+Each blocks/files are expected to be written asynchronously, one after the other. Running multiple write operations at the same time will result in undefined behavior.<br  />
+Note that there are no guides or restrictions on the ordering of each block while writing the archive, so make sure to follow the correct order by yourself. (or use <a class="el" href="group__writer.html#gafbafa0cf37d64aabbd4fb048ce4e5842">zpack_write_archive</a>)<br  />
 (header -&gt; data header -&gt; files -&gt; cdr -&gt; eocdr) </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga39566d98ea7bbe596d1618563d54b492" name="ga39566d98ea7bbe596d1618563d54b492"></a>
