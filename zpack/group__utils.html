@@ -90,6 +90,10 @@ Functions</h2></td></tr>
 <tr class="separator:ga15b58fb9a9599b99c1cba630aae1c54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5dcea30e649eb78bb99f41b099e6e3fd"><td class="memItemLeft" align="right" valign="top">zpack_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__utils.html#ga5dcea30e649eb78bb99f41b099e6e3fd">zpack_read_stream_done</a> (<a class="el" href="structzpack__stream__s.html">zpack_stream</a> *stream, <a class="el" href="structzpack__file__entry__s.html">zpack_file_entry</a> *entry)</td></tr>
 <tr class="separator:ga5dcea30e649eb78bb99f41b099e6e3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2a816413be8db5fc97ba81a213bfe25e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__utils.html#ga2a816413be8db5fc97ba81a213bfe25e">zpack_create_cctx</a> (zpack_compression_method method)</td></tr>
+<tr class="separator:ga2a816413be8db5fc97ba81a213bfe25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab9de15801a05cdd3c84495b96c78541e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__utils.html#gab9de15801a05cdd3c84495b96c78541e">zpack_create_dctx</a> (zpack_compression_method method)</td></tr>
+<tr class="separator:gab9de15801a05cdd3c84495b96c78541e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga73d96d7db67a200f01878985d85baa67"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__utils.html#ga73d96d7db67a200f01878985d85baa67">zpack_convert_wchar_to_utf8</a> (char *buffer, size_t len, const wchar_t *input)</td></tr>
 <tr class="separator:ga73d96d7db67a200f01878985d85baa67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -252,7 +256,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Gets the first file entry with the specified filename. This uses a simple linear lookup. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Gets the first file entry with the specified filename. This does a simple linear lookup. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">filename</td><td>The filename to look for. </td></tr>
     <tr><td class="paramname">file_entries</td><td>List of file entries. </td></tr>
@@ -260,6 +264,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The file entry. Returns NULL if the file doesn't exist. </dd></dl>
 
 </div>
 </div>
@@ -295,6 +300,56 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ga2a816413be8db5fc97ba81a213bfe25e" name="ga2a816413be8db5fc97ba81a213bfe25e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2a816413be8db5fc97ba81a213bfe25e">&#9670;&nbsp;</a></span>zpack_create_cctx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * zpack_create_cctx </td>
+          <td>(</td>
+          <td class="paramtype">zpack_compression_method&#160;</td>
+          <td class="paramname"><em>method</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Creates a compression context for the specified compression method. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">method</td><td>The compression method. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The compression context. Returns NULL if the compression method is none or invalid. </dd></dl>
+
+</div>
+</div>
+<a id="gab9de15801a05cdd3c84495b96c78541e" name="gab9de15801a05cdd3c84495b96c78541e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab9de15801a05cdd3c84495b96c78541e">&#9670;&nbsp;</a></span>zpack_create_dctx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * zpack_create_dctx </td>
+          <td>(</td>
+          <td class="paramtype">zpack_compression_method&#160;</td>
+          <td class="paramname"><em>method</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Creates a decompression context for the specified compression method. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">method</td><td>The compression method. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The decompression context. Returns NULL if the compression method is none or invalid. </dd></dl>
 
 </div>
 </div>
@@ -338,6 +393,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>The value returned by <a href="https://docs.microsoft.com/en-us/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte">WideCharToMultiByte</a>. </dd></dl>
 
 </div>
 </div>

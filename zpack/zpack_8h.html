@@ -110,13 +110,13 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ZPACK_VERSION_MINOR</b>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:a7ea5b1c3077d941c0f468f2cc426384f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a817e9b51fe76bd87c8c0fc9bbf00447a"><td class="memItemLeft" align="right" valign="top"><a id="a817e9b51fe76bd87c8c0fc9bbf00447a" name="a817e9b51fe76bd87c8c0fc9bbf00447a"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ZPACK_VERSION_PATCH</b>&#160;&#160;&#160;1</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ZPACK_VERSION_PATCH</b>&#160;&#160;&#160;2</td></tr>
 <tr class="separator:a817e9b51fe76bd87c8c0fc9bbf00447a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada2d4dbddd4fd12483a248369d554728"><td class="memItemLeft" align="right" valign="top"><a id="ada2d4dbddd4fd12483a248369d554728" name="ada2d4dbddd4fd12483a248369d554728"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ZPACK_VERSION</b>&#160;&#160;&#160;(ZPACK_VERSION_MAJOR * 100000 + ZPACK_VERSION_MINOR * 1000 + ZPACK_VERSION_PATCH * 10)</td></tr>
 <tr class="separator:ada2d4dbddd4fd12483a248369d554728"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba6389f2da59790acd12dfd99c27f483"><td class="memItemLeft" align="right" valign="top"><a id="aba6389f2da59790acd12dfd99c27f483" name="aba6389f2da59790acd12dfd99c27f483"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ZPACK_VERSION_STRING</b>&#160;&#160;&#160;&quot;2.0.1&quot;</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ZPACK_VERSION_STRING</b>&#160;&#160;&#160;&quot;2.0.2&quot;</td></tr>
 <tr class="separator:aba6389f2da59790acd12dfd99c27f483"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa66bf76d1dc040603eb077a57f26a836"><td class="memItemLeft" align="right" valign="top"><a id="aa66bf76d1dc040603eb077a57f26a836" name="aa66bf76d1dc040603eb077a57f26a836"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ZPACK_FALSE</b>&#160;&#160;&#160;0</td></tr>
@@ -347,6 +347,10 @@ Functions</h2></td></tr>
 <tr class="separator:ga15b58fb9a9599b99c1cba630aae1c54a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5dcea30e649eb78bb99f41b099e6e3fd"><td class="memItemLeft" align="right" valign="top">zpack_bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__utils.html#ga5dcea30e649eb78bb99f41b099e6e3fd">zpack_read_stream_done</a> (<a class="el" href="structzpack__stream__s.html">zpack_stream</a> *stream, <a class="el" href="structzpack__file__entry__s.html">zpack_file_entry</a> *entry)</td></tr>
 <tr class="separator:ga5dcea30e649eb78bb99f41b099e6e3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2a816413be8db5fc97ba81a213bfe25e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__utils.html#ga2a816413be8db5fc97ba81a213bfe25e">zpack_create_cctx</a> (zpack_compression_method method)</td></tr>
+<tr class="separator:ga2a816413be8db5fc97ba81a213bfe25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab9de15801a05cdd3c84495b96c78541e"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__utils.html#gab9de15801a05cdd3c84495b96c78541e">zpack_create_dctx</a> (zpack_compression_method method)</td></tr>
+<tr class="separator:gab9de15801a05cdd3c84495b96c78541e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga73d96d7db67a200f01878985d85baa67"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__utils.html#ga73d96d7db67a200f01878985d85baa67">zpack_convert_wchar_to_utf8</a> (char *buffer, size_t len, const wchar_t *input)</td></tr>
 <tr class="separator:ga73d96d7db67a200f01878985d85baa67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
