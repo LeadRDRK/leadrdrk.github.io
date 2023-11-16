@@ -1,0 +1,26 @@
+<div id="navbarRoot" class="root-flex navbar-root">
+    <div class="navbar container">
+        <a class="navbar-brand" href="/">
+            <img src="/assets/img/leadrdrk.svg" height="20" alt="LeadRDRK logo">
+        </a>
+        <div class="navbar-content">
+            <a class="navbar-link cyan{{#if home}} active{{/if}}" href="/">
+                <span class="material-symbols-outlined">&#xe88a;</span>
+                <span class="nav-label">home</span>
+            </a>
+            <a class="navbar-link magenta{{#if works}} active{{/if}}" href="/works/">
+                <span class="material-symbols-outlined">&#xea3c;</span>
+                <span class="nav-label">works</span>
+            </a>
+            <a class="navbar-link yellow{{#if blog}} active{{/if}}" href="/blog/">
+                <span class="material-symbols-outlined">&#xe032;</span>
+                <span class="nav-label">blog</span>
+            </a>
+            <a class="navbar-link green{{#if about}} active{{/if}}" href="/about/">
+                <span class="material-symbols-outlined">&#xe88e;</span>
+                <span class="nav-label">about</span>
+            </a>
+        </div>
+    </div>
+</div>
+<script type="module" src="/src/navbar.ts"></script>

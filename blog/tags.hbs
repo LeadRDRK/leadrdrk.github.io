@@ -1,0 +1,41 @@
+---
+pagination:
+  data: collections
+  size: 1
+  filter:
+    - all
+    - posts
+  alias: tag
+eleventyComputed:
+  title: Posts tagged with "{{ tag }}"
+permalink: "blog/tags/{{ slugify tag }}/index.html"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head_common
+      title=title
+      desc="Showing last 10 tagged posts"
+      href=page.url
+    }}
+    <link rel="stylesheet" href="/assets/css/blog.css" />
+  </head>
+  <body>
+    {{> bg_circles }}
+    {{> navbar blog=true }}
+    <div class="root-flex">
+      <div class="banner container">
+        <h1 class="yellow">{{ title }}</h1>
+        <span>Showing last 10 tagged posts</span>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="root-flex">
+        <div class="container">
+          {{> post_list posts=(reverse (slice (lookup collections tag) -10)) }}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

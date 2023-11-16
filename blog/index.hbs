@@ -1,0 +1,39 @@
+---
+pagination:
+  data: collections.posts
+  size: 10
+  reverse: true
+  alias: posts
+permalink: "blog/{{#if (gt pagination.pageNumber 0)}}{{ inc pagination.pageNumber }}/{{/if}}index.html"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head_common
+      title="LeadRDRK // blog"
+      desc="insane ramblings"
+      href=page.url
+    }}
+    <link rel="stylesheet" href="/assets/css/blog.css" />
+    <link rel="alternate" type="application/atom+xml" title="LeadRDRK // blog" href="/blog/feed.xml" />
+  </head>
+  <body>
+    {{> bg_circles }}
+    {{> navbar blog=true }}
+    <div class="root-flex">
+      <div class="banner container">
+        <h1 class="yellow">blog</h1>
+        <span>insane ramblings</span>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="root-flex">
+        <div class="container">
+          {{> post_list posts=posts }}
+          {{> page_nav pagination=pagination }}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

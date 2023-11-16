@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head_common
+      title="LeadRDRK // works"
+      desc="stuff i made over the years"
+      href="/works"
+    }}
+    <link rel="stylesheet" href="/assets/css/works.css" />
+  </head>
+  <body>
+    {{> bg_circles }}
+    {{> navbar works=true }}
+    <div class="root-flex">
+      <div class="banner container">
+        <h1 class="magenta">works</h1>
+        <span>stuff i made over the years</span>
+      </div>
+    </div>
+    <div class="main-content">
+      {{> section_title label="web stuff"}}
+      <div class="root-flex">
+        <div class="gallery container">
+          {{> gallery_item 
+            href="https://leadrdrk.com/avatarcropper/"
+            bg="https://leadrdrk.com/static/ac_card.png"
+            title="Avatar Cropper"
+            desc="Simple and accurate avatar cropping tool."
+          }}
+          {{> gallery_item 
+            href="http://sapari.leadrdrk.com/"
+            bg="/assets/img/sapari-thumb.jpg"
+            title="lead's sapari server"
+            desc="self-hosted server for SAPARi. powered by OpenBureau."
+          }}
+        </div>
+      </div>
+      {{> section_title label="open source"}}
+      <div class="root-flex">
+        <div class="gallery container">
+          {{> gallery_item 
+            href="https://github.com/LeadRDRK/AvatarCropper"
+            bg="https://leadrdrk.com/static/ac_card.png"
+            title="Avatar Cropper"
+            desc="Simple and accurate avatar cropping tool."
+          }}
+          {{> gallery_item 
+            href="https://github.com/LeadRDRK/OpenBureau"
+            bg="/assets/img/openbureau-thumb.jpg"
+            title="OpenBureau"
+            desc="Open source server implementation for SAPARi."
+          }}
+          {{> gallery_item 
+            href="https://github.com/LeadRDRK/ZPack"
+            bg="/assets/img/placeholder-thumb.jpg"
+            title="ZPack"
+            desc="Fast, simple, general-purpose archive file format."
+          }}
+          {{> gallery_item 
+            href="https://github.com/LeadRDRK/LESSR"
+            bg="/assets/img/placeholder-thumb.jpg"
+            title="LESSR"
+            desc="Scriptable software renderer for embedded systems."
+          }}
+        </div>
+      </div>
+      {{> section_title label="art stuff"}}
+      <div class="root-flex">
+        <div class="gallery container">
+          {{> gallery_item 
+            href="https://twitter.com/LeadRDRK"
+            bg="/assets/img/twitter-thumb.jpg"
+            title="Twitter"
+            desc="I mostly post art on Twitter. <i>(nope, not gonna call it X)</i>"
+            external=true
+          }}
+          {{> gallery_item 
+            href="https://www.pixiv.net/en/users/46872985"
+            bg="/assets/img/pixiv-thumb.jpg"
+            title="pixiv"
+            desc="I archive my art here. May not include everything I made. Higher quality images."
+            external=true
+          }}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

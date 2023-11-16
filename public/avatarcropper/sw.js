@@ -1,0 +1,2 @@
+var VERSION="v2.1.2";async function clearCaches(){var e=await caches.keys();for(let a of e)a!=VERSION&&await caches.delete(a)}async function fetchAndCache(e){if(new URL(e.url).origin!=self.location.origin)return await fetch(e);var a=await caches.open(VERSION),t=await a.match(e);if(t)return t;var c=await fetch(e);return c.ok&&206!=c.status&&await a.put(e,c.clone()),c}self.addEventListener("activate",(function(e){e.waitUntil(clearCaches())})),self.addEventListener("fetch",(function(e){e.respondWith(fetchAndCache(e.request))}));
+//# sourceMappingURL=sw.js.map

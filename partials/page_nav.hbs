@@ -1,0 +1,17 @@
+<div class="page-nav">
+  {{#if (neq pagination.href.first page.url)}}
+    <a class="page-link" href="{{ pagination.href.first }}">&lt;&lt;</a>
+  {{/if}}
+  {{#if pagination.href.previous}}
+    <a class="page-link" href="{{ pagination.href.previous }}">&lt;</a>
+  {{/if}}
+  {{#each (getNavHrefs pagination.hrefs pagination.pageNumber)}}
+    <a class="page-link{{#if (eq this.[0] ../page.url)}} current{{/if}}" href="{{ this.[0] }}">{{ this.[1] }}</a>
+  {{/each}}
+  {{#if pagination.href.next}}
+    <a class="page-link" href="{{ pagination.href.next }}">&gt;</a>
+  {{/if}}
+  {{#if (neq pagination.href.last page.url)}}
+    <a class="page-link" href="{{ pagination.href.last }}">&gt;&gt;</a>
+  {{/if}}
+</div>

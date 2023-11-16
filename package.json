@@ -1,0 +1,23 @@
+{
+  "name": "leadrdrk-web",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@types/node": "^20.8.8",
+    "luxon": "^3.4.3",
+    "markdown-it-anchor": "^8.6.7",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0",
+    "vite-plugin-eleventy": "github:LeadRDRK/vite-plugin-eleventy",
+    "vite-plugin-handlebars": "^1.6.0",
+    "vite-plugin-minify": "^1.5.2"
+  }
+}

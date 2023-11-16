@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head_common
+      title="LeadRDRK // about"
+      desc="self introduction and whatnot"
+      href="/about"
+    }}
+    <link rel="stylesheet" href="/assets/css/about.css" />
+  </head>
+  <body>
+    {{> bg_circles }}
+    {{> navbar about=true }}
+    <div class="root-flex">
+      <div class="banner container">
+        <h1 class="green">about</h1>
+        <span>self introduction and whatnot</span>
+      </div>
+    </div>
+    <div class="main-content">
+      {{> section_title label="who"}}
+      <div class="root-flex">
+        <div class="container">
+          <div>hi. i'm Lead. i'm mainly a programmer but i draw sometimes.</div>
+          <ul>
+            <li>i've been programming for as long as i can remember.</li>
+            <li>drawing since 2020.</li>
+          </ul>
+        </div>
+      </div>
+      {{> section_title label="skill::programming"}}
+      <div class="root-flex">
+        <div class="container">
+          self rating: <b>10/10</b>
+          <p>i consider myself to be proficient at these languages:</p>
+          <ul>
+            <li>C</li>
+            <li>C++</li>
+            <li>Lua</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>Dart</li>
+          </ul>
+          <p>things that i can do/have done:</p>
+          <ul>
+            <li>writing native, cross-platform software (in C/C++)</li>
+            <li>reverse engineering proprietary network protocols</li>
+            <li>writing discord bots</li>
+            <li>making stuff on the web (the reason why you're even here right now)</li>
+            <li>making games on roblox (where i started!)</li>
+            <li><s>procrastinating while working (expert)</s></li>
+            <li>...and more (probably)</li>
+          </ul>
+          <p>might or might not be for hire at any given time. contact me for more info.</p>
+        </div>
+      </div>
+      {{> section_title label="skill::drawing"}}
+      <div class="root-flex">
+        <div class="container">
+            self rating: <b>7/10</b>
+            <p>i usually draw fan art of characters that i like from various media, which includes but is not limited to: anime, manga and video games. check 'em out on my twitter or my pixiv.</p>
+            <p>i do not take commissions, but you can send me requests.</p>
+        </div>
+      </div>
+      {{> section_title label="art usage guidelines"}}
+      <div class="root-flex">
+        <div class="container">
+          you can:
+          <ul>
+            <li>use my art as your social media pfp (pls credit me if you do)</li>
+            <li>share my art on imageboards or pinterest (with a proper link to the source)</li>
+          </ul>
+          <p>you <b>MUST NOT</b>:</p>
+          <ul>
+            <li>use my art for AI training &#40;<span class="spoiler">i will fucking <span title="cartel style execution :)">kill you</span></span>&#41;</li>
+            <li>repost my art on social media</li>
+          </ul>
+          <p>if your intended use case is not mentioned here, please ask me for permission. thank you.</p>
+        </div>
+      </div>
+      {{> section_title label="contact"}}
+      <div class="root-flex">
+        <div class="container">
+          please contact me via email: 
+          <a href="javascript:void(0)" onclick="alert('lead\u0040leadrdrk\u002ecom')">click here to show</a>
+          <p>
+            if you wanna have a chat with me, send me a friend request on discord (guess the username lol)
+            and send me an email with your username. or you can skip the email part but i might
+            not accept random friend requests.
+          </p>
+        </div>
+      </div>
+      {{> section_title label="about this site"}}
+      <div class="root-flex">
+        <div class="container">
+          written in html/css/ts. built with vite + handlebars. blog additionally uses 11ty.
+          <p><i>Frank says hi.</i></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

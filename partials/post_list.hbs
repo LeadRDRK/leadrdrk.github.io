@@ -1,0 +1,17 @@
+{{#each posts}}
+  <div class="post-entry">
+    <div class="entry-info">
+      <a href="{{this.url}}"><h2>{{ this.data.title }}</h2></a>
+      <div>{{ this.data.summary }}</div>
+      <div class="post-date">
+        <span class="material-symbols-outlined">&#xe923;</span>
+        <i><time datetime="{{ htmlDateString this.data.date }}">{{ readableDate this.data.date }}</time></i>
+      </div>
+    </div>
+    <div class="entry-tags">
+      {{#each (filterTagList this.data.tags)}}
+        <a class="post-tag" href="/blog/tags/{{ slugify this }}">{{ this }}</a>
+      {{/each}}
+    </div>
+  </div>
+{{/each}}

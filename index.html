@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head_common
+      title="LeadRDRK"
+      desc="programmer / artist"
+    }}
+    <script type="application/ld+json">
+      {
+          "@context" : "https://schema.org",
+          "@type" : "WebSite",
+          "name" : "LeadRDRK",
+          "url" : "https://leadrdrk.com/"
+      }
+    </script>
+    <link rel="stylesheet" href="/assets/css/home.css" />
+  </head>
+  <body>
+    {{> navbar home=true }}
+    <canvas id="homeCanvas"></canvas>
+    <div id="homeBg"></div>
+    <div class="root-flex">
+      <div class="fit-screen home-wrapper">
+        <div class="home-main-outer">
+          <div class="home-main container">
+            <div class="brand-flex">
+              <img src="/assets/img/leadrdrk.svg" height="40" alt="LeadRDRK logo">
+              <div class="brand-subtitle">programmer / artist</div>
+            </div>
+            <div class="sm-tiles">
+              <a class="sm-tile" href="https://twitter.com/LeadRDRK" target="_blank">
+                <div class="sm-bg twitter">
+                  <img src="/assets/img/twitter.svg" height="28" alt="Twitter logo">
+                </div>
+                <div class="sm-caption">twitter</div>
+              </a>
+              <a class="sm-tile" href="https://www.pixiv.net/en/users/46872985" target="_blank">
+                <div class="sm-bg pixiv">
+                  <img src="/assets/img/pixiv.svg" height="28" alt="pixiv logo">
+                </div>
+                <div class="sm-caption">pixiv</div>
+              </a>
+              <a class="sm-tile" href="https://github.com/LeadRDRK" target="_blank">
+                <div class="sm-bg github">
+                  <img src="/assets/img/github.svg" height="30" alt="GitHub logo">
+                </div>
+                <div class="sm-caption">github</div>
+              </a>
+              <a class="sm-tile" href="https://ko-fi.com/leadrdrk" target="_blank">
+                <div class="sm-bg kofi">
+                  <img src="/assets/img/kofi.png" height="28" alt="Ko-fi logo">
+                </div>
+                <div class="sm-caption">ko-fi</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/home.ts"></script>
+  </body>
+</html>

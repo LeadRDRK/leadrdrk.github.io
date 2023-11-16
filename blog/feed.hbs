@@ -1,0 +1,26 @@
+---
+permalink: /blog/feed.html
+---
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="en">
+	<title>LeadRDRK // blog</title>
+	<subtitle>insane ramblings</subtitle>
+	<link href="https://leadrdrk.com/blog/feed.xml" rel="self"/>
+	<link href="https://leadrdrk.com/blog/"/>
+	<updated>{{ dateToRfc3339 (getNewestCollectionItemDate collections.posts) }}</updated>
+	<id>https://leadrdrk.com/blog/</id>
+	<author>
+		<name>LeadRDRK</name>
+	</author>
+	{{#each collections.posts}}
+	<entry>
+		<title>{{ this.data.title }}</title>
+        <summary>{{ this.data.summary }}</summary>
+		<link href="https://leadrdrk.com{{ this.url }}"/>
+		<updated>{{ dateToRfc3339 this.date }}</updated>
+		<id>https://leadrdrk.com{{ this.url }}</id>
+		<content type="html">
+            {{ concat "<a href=\"https://leadrdrk.com" this.url "\">View post</a>" }}
+        </content>
+	</entry>
+	{{/each}}
+</feed>

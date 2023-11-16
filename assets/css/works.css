@@ -1,0 +1,137 @@
+.main-content {
+    padding-top: 8px;
+    padding-bottom: 100px;
+}
+
+.gallery {
+    display: flex;
+    background-color: #181818;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 24px 12px;
+}
+
+.gallery-item {
+    border-radius: 8px;
+    box-shadow: 0px 0px 16px 0px #111;
+    width: calc((100% - 36px)/4);
+    height: 172px;
+    transform: scale(1);
+    transition: 0.25s cubic-bezier(.47,1.8,.41,.8);
+    color: inherit;
+    text-decoration: none;
+}
+
+.gallery-item:hover {
+    z-index: 100;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 32px 0px #000;
+}
+
+.item-thumbnail {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    height: 128px;
+    border: 2px solid #333;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    transition: 0.25s;
+}
+
+.gallery-item:hover .item-thumbnail {
+    height: 150px;
+}
+
+.item-info {
+    background-color: #333;
+    width: calc(100% - 24px);
+    padding: 12px;
+    border-radius: 0 0 8px 8px;
+    height: 20px;
+    transition: 0.25s;
+}
+
+.gallery-item:hover .item-info {
+    height: 86px;
+}
+
+.item-title {
+    height: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+}
+
+.item-title .material-symbols-outlined {
+    line-height: 0;
+    font-size: 16px;
+}
+
+.item-desc {
+    opacity: 0;
+    transition: 0.25s;
+    line-height: 1.2;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.gallery-item:hover .item-desc {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+    .st-bar-end {
+        background-image: linear-gradient(90deg, #3A4444, #3A4444 50%, transparent 80%);
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .gallery-item {
+        width: calc(100% / 3 - 8px);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .gallery-item {
+        width: calc(100% / 2 - 6px);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .gallery-item {
+        width: 100%;
+    }
+}
+
+@media (hover: none) {
+    .item-info {
+        height: unset;
+    }
+    
+    .gallery-item:hover .item-info {
+        height: unset;
+    }
+
+    .gallery-item {
+        height: unset;
+    }
+
+    .gallery-item:hover {
+        transform: none;
+    }
+
+    .item-desc {
+        opacity: 1;
+    }
+
+    .item-thumbnail {
+        height: 150px;
+    }
+}

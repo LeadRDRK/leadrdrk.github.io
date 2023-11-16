@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head_common
+      title=title
+      desc=summary
+      href=page.url
+    }}
+    <link rel="stylesheet" href="/assets/css/blog.css" />
+    <link rel="stylesheet" href="/assets/css/prism-okaidia.css" />
+  </head>
+  <body>
+    {{> bg_circles }}
+    {{> navbar blog=true }}
+    <div class="root-flex">
+      <div class="banner container">
+        <h1 class="yellow">{{ title }}</h1>
+        <span>{{ summary }}</span>
+        <div class="post-date">
+          <span class="material-symbols-outlined">&#xe923;</span>
+          <i><time datetime="{{ htmlDateString date }}">{{ readableDate date }}</time></i>
+        </div>
+        <div class="post-tags">
+          <span class="material-symbols-outlined">&#xf05b;</span>
+          {{#each (filterTagList tags)}}
+            <a class="post-tag" href="/blog/tags/{{ slugify this }}">{{ this }}</a>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="root-flex">
+        <div class="container">
+          <div class="content-wrapper">
+            <div id="content">
+              {{{ content }}}
+            </div>
+            <div id="tocSidebar">
+              <h3>In this article</h3>
+            </div>
+          </div>
+          <div class="share-options">
+            <h1>Share this post!</h1>
+            <span class="share-btns">
+              <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{ encodeURI title }}&via=LeadRDRK">Tweet</a>
+              <a class="tumblr-share-button" href="https://www.tumblr.com/share"></a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+          t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+
+        t._e = [];
+        t.ready = function(f) {
+          t._e.push(f);
+        };
+
+        return t;
+      }(document, "script", "twitter-wjs"));
+    </script>
+    <script id="tumblr-js" async src="https://assets.tumblr.com/share-button.js"></script>
+    <script defer type="module" src="/src/blog_post.ts"></script>
+  </body>
+</html>
