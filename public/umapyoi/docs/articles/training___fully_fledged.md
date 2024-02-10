@@ -1,6 +1,26 @@
 # Training & Fully Fledged
 "What is Training? What is Fully Fledged?" and other related questions are mainly documented here.
 
+## Training Terminal
+Although there are still unknown possibilities for Umamuseme Soul, one thing is certain: Soul, which has just regained its light, is not able to show its full power. The process of channeling "Fully Fledged" and maximizing its power is a major issue now. This process is called "training", and the people who train these Umamuseme Souls are called "trainers".
+
+Until Fully Fledged, its inherent power cannot be fully applied to the user. 
+
+ In this respect, the essence of Fully Fledged is to liberate the full power of an Umamuseme Soul's inner being, and the training is to build up the power and prepare for it.
+
+The most popular training equipment is the newly designed Training Terminal, which is the result of several years of research by the entire training staff. The most important feature of this terminal is that six different support cards can be inserted at the same time to carry out the training process, and the whole process is automated. All you need to do is insert the preset support cards, put in the Umamuseme Soul to be trained, and then start the terminal to automate the training process.
+
+Some old-fashioned trainers stick to traditional training methods and you can find them in villages. 
+
+ They will trade with you for some things that you might use during the training process.
+
+### Crafting: Training Terminal
+For technical reasons, <span style="color:#f00"><b>Training Terminal cannot be canceled voluntarily once started!</b></span>
+
+If you need to forcibly cancel training, you will need to move the training Umamuseme Soul out of Training Terminal.
+
+![training_facility](/umapyoi/assets/img/crafting/training_facility.png)
+
 ## Statuses & Skills
 The Umamusume Soul has five statuses, as well as a number of other additional attributes and skills associated with it. 
 
@@ -49,6 +69,11 @@ Skills consume Action Pt. If there is not enough Action Pt, the skill cannot be 
 There is a limit to the number of skills an Umamusume can learn. If the number of skills reaches the upper limit, no other skills can be learned. 
 
 <span style="color:#f00"><b>Skills cannot be unlearned, so care needs to be taken with skills, plan wisely.</b></span>
+
+### Crafting: Skill Learning Table
+For skill books, look in the loot chest yourself, or ask the trainer nearby.
+
+![skill_learning_table](/umapyoi/assets/img/crafting/skill_learning_table.png)
 
 ## Support Card
 Support Cards are magical cards that provide power directly to Soul. 
@@ -99,17 +124,3 @@ In the past there was a ritualized form of training, but now all that remains ar
 However, to train with these training books, you need to become Umamusume before reading. As you read, you will learn from the text, thus increasing your ability. 
 
  Please note that there is only a limited amount of knowledge in the text, so you will not be able to increase your ability after a certain level of reading the training books.
-
-## Training Terminal
-Although there are still unknown possibilities for Umamuseme Soul, one thing is certain: Soul, which has just regained its light, is not able to show its full power. The process of channeling "Fully Fledged" and maximizing its power is a major issue now. This process is called "training", and the people who train these Umamuseme Souls are called "trainers".
-
-Until Fully Fledged, its inherent power cannot be fully applied to the user. 
-
- In this respect, the essence of Fully Fledged is to liberate the full power of an Umamuseme Soul's inner being, and the training is to build up the power and prepare for it.
-
-The most popular training equipment is the newly designed Training Terminal, which is the result of several years of research by the entire training staff. The most important feature of this terminal is that six different support cards can be inserted at the same time to carry out the training process, and the whole process is automated. All you need to do is insert the preset support cards, put in the Umamuseme Soul to be trained, and then start the terminal to automate the training process.
-
-Some old-fashioned trainers stick to traditional training methods and you can find them in villages. 
-
- They will trade with you for some things that you might use during the training process.
-
