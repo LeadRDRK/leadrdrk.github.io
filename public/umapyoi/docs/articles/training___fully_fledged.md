@@ -36,7 +36,7 @@ There are four types of skills: Gaining, Restoring, Hindering and Passive. Enhan
 
  Passive skills cannot actively trigger skill effects. On the contrary, passive skills will be activated automatically based on specific situations.
 
-![umapyoi:textures/book_images/skills.png](/assets/img/book_images/skills.png)
+![umapyoi:textures/book_images/skills.png](/umapyoi/assets/img/book_images/skills.png)
 
 There are three ways to acquire a skill: Factor Inheritance, Training, and Learning Alone. 
 

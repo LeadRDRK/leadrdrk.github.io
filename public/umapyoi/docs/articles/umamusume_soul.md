@@ -17,7 +17,7 @@ There are five stages of motivations: <span style="color:#EB4573">Peak</span>, <
 
  Injury is usually the main cause of lowered motivation, and consuming some odd-tasting foods may also lead to lowered motivation. The fastest and most common way to get back in the motivation is to consume tasty food, such as tasty drinks or desserts.
 
-![umapyoi:textures/book_images/motivations.png](/assets/img/book_images/motivations.png)
+![umapyoi:textures/book_images/motivations.png](/umapyoi/assets/img/book_images/motivations.png)
 
 If Motivation is already Peak, continuing to lower Motivation may lead to "Panicking". 
 
@@ -69,12 +69,12 @@ These dull colored crystals don't work at all.
 
 Offering these dull crystals directly to the statue of the Goddess will cause the crystals to glow again with the gift of the Three Goddesses.
 
-![umapyoi:textures/book_images/summon_soul.png](/assets/img/book_images/summon_soul.png)
-![umapyoi:textures/book_images/blank_soul.png](/assets/img/book_images/blank_soul.png)
+![umapyoi:textures/book_images/summon_soul.png](/umapyoi/assets/img/book_images/summon_soul.png)
+![umapyoi:textures/book_images/blank_soul.png](/umapyoi/assets/img/book_images/blank_soul.png)
 
 After transform to "Uma Musume", By default the current motivations and selected skill are displayed in the bottom right corner of the HUD. 
 
  There is a blue bar on the right side of the HUD representing the current Action Pt, which is not shown by default if Action Pt has been fully restored.
 
-![umapyoi:textures/book_images/hud_info.png](/assets/img/book_images/hud_info.png)
+![umapyoi:textures/book_images/hud_info.png](/umapyoi/assets/img/book_images/hud_info.png)
 
